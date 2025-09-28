@@ -1,0 +1,251 @@
+html, body {
+  height: 100%;
+  margin: 0;  /* remove default margin */
+}
+/* === Base Styles === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* === Top Bar === */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+  background-color: #0f0f0f;
+  position: relative;
+}
+
+/* Sidebar button */
+.side-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.side-btn:hover {
+  background-color: #3a3a3a;
+}
+
+.side-btn i {
+  font-size: 18px;
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 30px;
+  transform: scale(0.8);
+}
+
+/* === Search Area === */
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-bar {
+  flex: 1;
+  height: 37px;
+  padding: 0 15px;
+  background-color: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 100px 0 0 100px;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #0071E3; /* Apple blue highlight */
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  background-color: #2a2a2a;
+  padding: 10.5px 20px;
+  border-radius: 0 100px 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.search-btn i {
+  font-size: 18px;
+}
+.mic {
+  position: absolute;           /* absolute positioning inside top-bar */
+  top: 23.24%;                     /* vertical center */
+  left: 66%;      /* adjust 300px based on half the search bar width + spacing */
+  transform: scale(1.3);  /* perfect vertical alignment */
+  display: flex;                /* center icon inside circle */
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;           /* circular */
+  cursor: pointer;
+}
+
+.mic:hover {
+  background-color: #3a3a3a;    /* hover effect */
+}
+
+.create {
+  background-color: #2a2a2a;
+  transform: scale(1.2);
+  height: 30px;
+  width: 60px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.create:hover {
+  background-color: #3a3a3a;
+}
+
+.prof {
+  width: 40px;
+  margin-left: 40px;
+  border-radius: 100%;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  background-color: #0f0f0f;
+  width: 80px;
+  height: 94%;
+}
+
+.thesidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  margin-top: 10px;
+  margin-left: 2px;
+  padding: 30px 30px 30px 30px;
+}
+
+.home:hover {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+.thebell {
+  margin-left: 80px;
+  transform: scale(1.2);
+  padding: 10px 10px 10px 10px;
+}
+
+.thebell:hover {
+  background-color: #2a2a2a;
+  border-radius: 100px;
+}
+
+.alsobody {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* spacing between rows */
+}
+
+.body {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* spacing between thumbnails */
+}
+
+.thumbnail {
+  width: 500px;   /* fixed thumbnail box width */
+  height: 300px;  /* fixed thumbnail box height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-right: 170px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop to fit the box neatly */
+  border-radius: 6px;
+}
+
+.thumbnail p {
+  margin-top: 30px;
+  font-size:17px;
+}
+
+.thumbnail h6 {
+  margin-top: 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 400px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-container {
+    max-width: 250px;
+  }
+
+  .search-bar {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .search-btn {
+    padding: 0 12px;
+  }
+}
